@@ -1,11 +1,36 @@
-<!-- 
-  DAY 15 PRACTICE LAB
-  Practice the concepts from today's video lecture below.
--->
-<div id="root">
-    <div class="lab-container">
-        <h1>Lab <span>Session</span> {{ selectedDay }}</h1>
-        <p>Console is active. Use the <strong>JS Tab</strong> to practice logic.</p>
-        <div id="display" class="debug-panel">Waiting for JS input...</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Core v1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Virtual Core v1.0</h1>
+
+    <div id="loginSection">
+        <p>Enter Master PIN</p>
+        <input type="password" id="pinInput">
+        <button onclick="checkPin()">Boot System</button>
+        <p id="loginMessage"></p>
     </div>
+
+    <div id="systemSection" class="hidden">
+
+        <h2>Main Menu</h2>
+        <button onclick="openBank()">Bank</button>
+        <button onclick="openShop()">Shop</button>
+        <button onclick="openVault()">Vault</button>
+        <button onclick="exitSystem()">Exit</button>
+
+        <div id="output"></div>
+
+    </div>
+
 </div>
+
+<script src="script.js"></script>
+</body>
+</html>
