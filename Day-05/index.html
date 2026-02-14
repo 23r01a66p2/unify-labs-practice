@@ -1,11 +1,64 @@
-<!-- 
-  DAY 5 PRACTICE LAB
-  Practice the concepts from today's video lecture below.
--->
-<div id="root">
-    <div class="lab-container">
-        <h1>Lab <span>Session</span> {{ selectedDay }}</h1>
-        <p>Console is active. Use the <strong>JS Tab</strong> to practice logic.</p>
-        <div id="display" class="debug-panel">Waiting for JS input...</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevConf 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container flex-between">
+      <h2 class="logo">DevConf 2026</h2>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Speakers</a>
+        <a href="#">Schedule</a>
+        <a href="#">Tickets</a>
+      </nav>
     </div>
-</div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Join The Future of Technology</h1>
+      <p>March 2026 • San Francisco • 5000+ Developers</p>
+      <button class="btn btn-primary cta">Register Now</button>
+    </div>
+  </section>
+
+  <!-- SPEAKERS SECTION -->
+  <section class="container section">
+    <h2 class="section-title">Featured Speakers</h2>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>AI & ML</h3>
+        <p>Latest trends in Artificial Intelligence.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cloud Computing</h3>
+        <p>Scaling modern cloud infrastructure.</p>
+      </div>
+
+      <div class="card">
+        <h3>Web 3.0</h3>
+        <p>Blockchain & decentralized future.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 DevConf. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
