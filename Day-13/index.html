@@ -1,11 +1,149 @@
-<!-- 
-  DAY 13 PRACTICE LAB
-  Practice the concepts from today's video lecture below.
--->
-<div id="root">
-    <div class="lab-container">
-        <h1>Lab <span>Session</span> {{ selectedDay }}</h1>
-        <p>Console is active. Use the <strong>JS Tab</strong> to practice logic.</p>
-        <div id="display" class="debug-panel">Waiting for JS input...</div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessible & Optimized Project</title>
+
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --secondary-color: #22c55e;
+      --text-color: #1f2933;
+      --bg-color: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ===============================
+       Icon-only Button with ARIA
+    =============================== */
+    .icon-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ===============================
+       Content Section
+    =============================== */
+    main {
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* ===============================
+       Performance-friendly Animation
+    =============================== */
+    .card {
+      margin-top: 1rem;
+      padding: 1.5rem;
+      background: #f9fafb;
+      border-radius: 12px;
+      animation: fadeSlide 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* ===============================
+       Button
+    =============================== */
+    .btn {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--secondary-color);
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <button class="icon-btn" aria-label="Open navigation menu">
+        ☰
+      </button>
+    </nav>
+  </header>
+  <main>
+
+    <section>
+      <h2>About Me</h2>
+      <h3>Professional Profile</h3>
+      <img src="profile.png" width="200" height="200" alt="Professional headshot of a software developer" />
+
+      <div class="card">
+        <p>
+          I am a front-end developer focused on accessibility, performance,
+          and clean UI design.
+        </p>
+        <button class="btn">Contact Me</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <h3>Featured Project</h3>
+      <img src="decorative-shape.svg" alt="" />
+
+      <div class="card">
+        <p>
+          This project demonstrates semantic HTML, ARIA usage,
+          GPU-optimized animations, and scalable CSS architecture.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
