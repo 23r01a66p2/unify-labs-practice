@@ -1,11 +1,69 @@
-<!-- 
-  DAY 6 PRACTICE LAB
-  Practice the concepts from today's video lecture below.
--->
-<div id="root">
-    <div class="lab-container">
-        <h1>Lab <span>Session</span> {{ selectedDay }}</h1>
-        <p>Console is active. Use the <strong>JS Tab</strong> to practice logic.</p>
-        <div id="display" class="debug-panel">Waiting for JS input...</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git & GitHub Setup Project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1>Git & GitHub Setup Guide</h1>
+      <p>Complete Step-by-Step Project Implementation 🚀</p>
     </div>
-</div>
+  </header>
+
+  <main class="container">
+
+    <!-- STEP 1 -->
+    <section class="card">
+      <h2>Step 1: Local Setup</h2>
+      <ul>
+        <li>Download and install Git</li>
+        <li>Verify using <code>git --version</code></li>
+        <li>Set global username and email</li>
+      </ul>
+
+      <pre>
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+      </pre>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="card">
+      <h2>Step 2: GitHub Presence</h2>
+      <ul>
+        <li>Create a GitHub account</li>
+        <li>Generate Personal Access Token (repo access)</li>
+        <li>Store the token securely</li>
+      </ul>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="card">
+      <h2>Step 3: First Repository Push</h2>
+      <pre>
+mkdir git-practice
+cd git-practice
+git init
+touch README.md
+git add README.md
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/username/git-practice.git
+git push -u origin main
+      </pre>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Git Practice Project | Built with HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
