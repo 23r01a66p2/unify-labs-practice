@@ -1,32 +1,31 @@
-const addBtn = document.getElementById("addBtn");
-const taskInput = document.getElementById("taskInput");
-const taskList = document.getElementById("taskList");
+const fetchBtn = document.getElementById("fetchBtn");
+const spinner = document.getElementById("spinner");
+const postsContainer = document.getElementById("posts");
 
-addBtn.addEventListener("click", addTask);
+fetchBtn.addEventListener("click", fetchPosts);
 
-function addTask() {
-    const taskText = taskInput.value.trim();
+async function fetchPosts() {
+    postsContainer.innerHTML = "";
+    spinner.style.display = "block";
 
-    if (taskText === "") return;
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
+        const data = await response.json();
 
-    const li = document.createElement("li");
-    li.textContent = taskText;
+        spinner.style.display = "none";
 
-    li.addEventListener("click", function () {
-        li.classList.toggle("completed");
-    });
+        data.forEach(post => {
+            const div = document.createElement("div");
+            div.classList.add("post");
+            div.innerHTML = `
+                <strong>Post #${post.id}</strong>
+                <p>${post.title}</p>
+            `;
+            postsContainer.appendChild(div);
+        });
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add("delete-btn");
-
-    deleteBtn.addEventListener("click", function (e) {
-        e.stopPropagation(); // Prevent toggle when deleting
-        taskList.removeChild(li);
-    });
-
-    li.appendChild(deleteBtn);
-    taskList.appendChild(li);
-
-    taskInput.value = "";
+    } catch (error) {
+        spinner.style.display = "none";
+        postsContainer.innerHTML = "<p>Error fetching data.</p>";
+    }
 }

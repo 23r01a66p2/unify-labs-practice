@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Todo UI Interaction</title>
+    <meta charset="UTF-8">
+    <title>Live API Data Fetch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Todo List</h1>
-
     <div class="container">
-        <input type="text" id="taskInput" placeholder="Enter a task">
-        <button id="addBtn">Add</button>
+        <h1>Live Posts Fetcher</h1>
+        <button id="fetchBtn">Fetch Posts</button>
 
-        <ul id="taskList"></ul>
+        <div class="spinner" id="spinner"></div>
+
+        <div class="posts" id="posts"></div>
     </div>
 
     <script src="script.js"></script>
