@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NEXUS - Real-time Data Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<header class="navbar">
+  <h1>NEXUS</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search cryptocurrency...">
+
+    <select id="sortSelect">
+      <option value="market_cap_desc">Market Cap</option>
+      <option value="price_desc">Price</option>
+      <option value="name_asc">Name (A-Z)</option>
+    </select>
+
+    <button id="favoritesBtn">Favorites</button>
+    <button id="themeToggle">🌙</button>
+  </div>
+</header>
+
+<section class="analytics">
+  <div class="stat">
+    <h3>Total Market Cap</h3>
+    <p id="totalMarketCap">$0</p>
+  </div>
+  <div class="stat">
+    <h3>Highest Price</h3>
+    <p id="highestPrice">$0</p>
+  </div>
+  <div class="stat">
+    <h3>Lowest Price</h3>
+    <p id="lowestPrice">$0</p>
+  </div>
+</section>
+
+<div id="notification"></div>
+<div id="loader" class="loader hidden"></div>
+<div id="cardContainer" class="cards"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
