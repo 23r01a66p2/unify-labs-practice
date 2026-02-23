@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.form-container {
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  background: #f6c23e;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #dda20a;
+}
+
+.card {
+  background: white;
+  color: black;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+}
