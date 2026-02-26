@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atlas Product Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>MongoDB Atlas Product Manager ☁️</h1>
+
+    <!-- Add Product -->
+    <div class="card">
+        <h2>Add Product</h2>
+        <input type="text" id="name" placeholder="Product Name">
+        <input type="number" id="price" placeholder="Price">
+        <input type="number" id="stock" placeholder="Stock">
+        <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <!-- Update Stock -->
+    <div class="card">
+        <h2>Update Stock</h2>
+        <input type="text" id="updateId" placeholder="Product ID">
+        <input type="number" id="newStock" placeholder="New Stock">
+        <button onclick="updateStock()">Update Stock</button>
+    </div>
+
+    <!-- Delete Product -->
+    <div class="card">
+        <h2>Delete Product</h2>
+        <input type="text" id="deleteId" placeholder="Product ID">
+        <button onclick="deleteProduct()">Delete Product</button>
+    </div>
+
+    <!-- Get All Products -->
+    <div class="card">
+        <h2>View Products</h2>
+        <button onclick="getProducts()">Fetch Products</button>
+        <ul id="productList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
