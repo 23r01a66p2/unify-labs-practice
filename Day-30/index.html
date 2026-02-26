@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TITAN - Premium Watches</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">TITAN</div>
+
+  <input type="text" id="search" placeholder="Search Titan Watches...">
+
+  <div class="cart-icon" onclick="toggleCart()">
+    🛒 Cart <span id="cart-count">0</span>
+  </div>
+</header>
+<section class="hero">
+  <h1>Discover Timeless Elegance</h1>
+  <p>Premium Watches for Every Occasion</p>
+</section>
+<section class="products">
+  <h2>Featured Watches</h2>
+  <div class="product-grid" id="product-grid"></div>
+</section>
+<div id="overlay" class="overlay" onclick="closeCart()"></div>
+
+<div class="cart" id="cart">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <span class="close-btn" onclick="closeCart()">✖</span>
+  </div>
+
+  <div id="cart-items"></div>
+  <h3>Total: ₹<span id="total">0</span></h3>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
