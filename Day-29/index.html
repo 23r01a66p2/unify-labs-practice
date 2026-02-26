@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZENITH Blogger</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>ZENITH Blogger</h1>
+    <button id="themeToggle">theme switch</button>
+  </header>
+
+  <section class="editor">
+    <h2>Create / Edit Post</h2>
+    <input type="hidden" id="postId">
+    <input type="text" id="title" placeholder="Post Title">
+    <input type="text" id="category" placeholder="Category">
+    <textarea id="content" placeholder="Write your content here..."></textarea>
+    <button id="saveBtn">Publish</button>
+  </section>
+
+  <section>
+    <h2>All Posts</h2>
+    <div class="grid" id="posts"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
